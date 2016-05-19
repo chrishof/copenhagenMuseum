@@ -31,6 +31,7 @@ library(plyr)
 beetles<-ddply(beetles,.(Species,Year),summarise,Count=sum(Count),.drop=FALSE)
 
 #Plotting species number
+#HELLO
 beetlesSN<-ddply(beetles,.(Year),summarise,nuSpecies=length(unique(Species[Count!=0])))
 
 library(ggplot2)
